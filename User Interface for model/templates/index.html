@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Air Quality Prediction</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-light bg-dark">
+        <span class="navbar-text">
+            <h1>Air Quality Predictor</h1>
+        </span>
+    </nav>
+
+    <form action="{{ url_for('y_predict')}}"method="post">
+
+        <div class="form-group">
+
+
+            <legend><b>Input Parameter</b></legend>
+            <br><b>Particulate Matter2.5(PM2.5):</b><br>
+
+            <input name="pm2.5" type="number" step="any" min = 0 class="form-control" required="required" placeholder="Input">
+            <br>
+
+            <br><b>Particulate Matter10(PM10):</b><br>
+            <input name="pm10" type="number" step="any" min = 0 class="form-control" required="required" placeholder="Input">
+            <br>
+
+            <br><b>Nitric Oxide(NO)</b><br>
+            <input name="no" type="number" step="any" min = 0 class="form-control" required="required" placeholder="Input">
+            <br>
+
+            <br><b>Nitrogen Dioxide(NO<sub>2</sub>)</b><br>
+            <input name="no2" type="number" step="any" min = 0 class="form-control" required="required" placeholder="Input">
+            <br>
+
+            <br><b>Nitrogen Oxides(NO<sub>x</sub>)</b><br>
+            <input name="nox" type="number" step="any" min = 0 class="form-control" required="required" placeholder="Input">
+            <br>
+
+            <br><b>Ammonia(NH<sub>3</sub>)</b><br>
+            <input name="nh3" type="number" step="any" min = 0 class="form-control" required="required" placeholder="Input">
+            <br>
+
+            <br><b>Carbon Monoxide(CO)</b><br>
+            <input name="co" type="number" step="any" min = 0 class="form-control" required="required" placeholder="Input">
+            
+            
+            <br><b>Sulphur Dioxide(SO<sub>2</sub>)</b><br>
+            <input name="so2" type="number" step="any" min = 0 class="form-control" required="required" placeholder="Input">
+            <br>
+
+            <br><b>Toluene(Tol)</b><br>
+            <input name="tol" type="number" step="any" min = 0 class="form-control" required="required" placeholder="Input">
+            <br>
+
+            <br>
+            <div class="btn-text-center">
+
+                <input  type="submit" value="Submit" class="btn">
+
+            </div>
+            
+
+        </div>
+
+    </form>
+    <div class="result" align="center">
+        <h1>Predicted AQI:</h1>
+        <p style="font-size:50px">{{ prediction_text }}</p>
+    </div>
+    
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
+
+
+</body>
+</html>
