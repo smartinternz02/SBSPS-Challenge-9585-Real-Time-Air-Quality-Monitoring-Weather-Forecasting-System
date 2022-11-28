@@ -22,14 +22,7 @@
      
    https://www.credly.com/users/deep-sarkar.e1fb39c7
   
-  <h2>------------Important Note--------------
     
- Two members of our MachineLearners team, Abhirup Basak and Deep Sarkar are not able to complete the course
-'Enterprise Grade A.I.' because of a visibility glitch with the Topic "Add skills to your Watson Assistant".
-Upon Opening the slides of that topic they find a white screen with no navigative or interactive buttons and therefore they are unable to complete it,
-resulting them unable to access the last test in the third module even though they completed all their other topics in the course and 
-completed the test from module 1 and 2.
-    We had contacted the support several times but they were unable to provide a solution   
     
   
   
